@@ -1,0 +1,51 @@
+// data.data
+var data  = {
+    "sync_ts": "",
+    "sco_count": 0,
+    "sku_id_name": "南红玛瑙 三通 610元",
+    "rid": 1,
+    "min_count": 0,
+    "max_count": 0,
+    "so_count": 0,
+    "po_count": 0,
+    "ao_count": 0,
+    "lm_ts": 1480996257000,
+    "sro_count": 0,
+    "id": "ruyizang:1:ruyizang:AXZTY115HZ105",
+    "tenantry_id": "ruyizang",
+    "goods_id_name": "南红玛瑙 三通 610元",
+    "stock_count": 6,
+    "v_count": 0,
+    "warehouse_location_id": "",
+    "goods_id": "ruyizang:Z105",
+    "account_crt_id": "",
+    "sku_id": "ruyizang:AXZTY115HZ105",
+    "is_alert": 0,
+    "pco_count": 0,
+    "pro_count": 0,
+    "uom_id": "",
+    "sku_count": 6,
+    "crt_ts": 1470158023000,
+    "warehouse_id_name": "成品仓库",
+    "warehouse_zone_id": "",
+    "sync_status": 3,
+    "sku_code": "AXZTY115HZ105",
+    "warehouse_id": "AXZTY100HZ27D",
+    "status": 5
+    }
+// model.main
+var main = {
+    "code": "",
+    "name": "",
+    "memo": "",
+    "ds_code": "bind_dataset_code",//所属数据集
+    "show_type": "bubble|line|bar|pie|radar|funnel",//显示类型
+    "fields": [{
+        "code": "",//字段编码
+        "name": "",//显示名称
+        "type": "integer|code|memo",//数据类型
+        "tpl": "",//显示模板
+        "pos": 0, //排序顺序
+        "series": "x|y|z|none", //所在轴
+    }],
+}
