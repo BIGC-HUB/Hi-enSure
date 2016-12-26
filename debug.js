@@ -1,272 +1,261 @@
 var log = function() {
     console.log.apply(console, arguments)
 }
-
 // handlebars
 // var template = window['tempHtml']["person"],
 // html = template({"firstname": "熊", "lastname": "猫"});
 // $('#person').html(html)
+
 var data = {
-  "data": {
-    "data": [
-      {
-        "prop_memo": "",
-        "account_crt_id_name": "gaoqr",
-        "code": "Z001",
-        "memo": "Z001",
-        "rid": 1,
-        "price": 0.00,
-        "lm_ts": 1470157994000,
-        "id": "ruyizang:Z001",
-        "tenantry_id": "ruyizang",
-        "brand": "",
-        "weight": 50.00,
-        "account_crt_id": "ruyizang:15201218752",
-        "cate_id": "",
-        "avatar": "",
-        "volume": 0.00,
-        "is_combo": 0,
-        "is_gift": 0,
-        "sales_name": "佛珠216天然合成清宫红玛瑙5.5mm正圆收藏级红T1203天1",
-        "crt_ts": 1470157994000,
-        "has_sku": 3,
-        "bar_code": "",
-        "name": "佛珠216天然合成清宫红玛瑙5.5mm正圆收藏级红T1203天1",
-        "category": "",
-        "status": 5
-      },
-      {
-        "prop_memo": "",
-        "code": "Z200",
-        "memo": "",
-        "rid": 2,
-        "price": 0.00,
-        "lm_ts": 1470157994000,
-        "id": "ruyizang:Z200",
-        "tenantry_id": "ruyizang",
-        "brand": "",
-        "weight": 60.00,
-        "account_crt_id": "",
-        "cate_id": "",
-        "avatar": "",
-        "volume": 0.00,
-        "is_combo": 0,
-        "is_gift": 0,
-        "sales_name": "佛珠手串纯天然汉传白水晶14mm正圆精选级透明TJ14颗1203满1",
-        "crt_ts": 1470157994000,
-        "has_sku": 3,
-        "bar_code": "",
-        "name": "佛珠手串纯天然汉传白水晶14mm正圆精选级透明TJ14颗1203满1",
-        "category": "",
-        "status": 5
-      },
-      {
-        "prop_memo": "",
-        "code": "Z201",
-        "memo": "",
-        "rid": 3,
-        "price": 0.00,
-        "lm_ts": 1470157994000,
-        "id": "ruyizang:Z201",
-        "tenantry_id": "ruyizang",
-        "brand": "",
-        "weight": 65.00,
-        "account_crt_id": "",
-        "cate_id": "",
-        "avatar": "",
-        "volume": 0.00,
-        "is_combo": 0,
-        "is_gift": 0,
-        "sales_name": "佛珠手串纯天然汉传白水晶14mm正圆精选级透明TJ14颗1203Z201满1",
-        "crt_ts": 1470157994000,
-        "has_sku": 3,
-        "bar_code": "",
-        "name": "佛珠手串纯天然汉传白水晶14mm正圆精选级透明TJ14颗1203Z201满1",
-        "category": "",
-        "status": 5
-      },
-      {
-        "prop_memo": "",
-        "code": "Z002",
-        "memo": "",
-        "rid": 4,
-        "price": 0.00,
-        "lm_ts": 1470157994000,
-        "id": "ruyizang:Z002",
-        "tenantry_id": "ruyizang",
-        "brand": "",
-        "weight": 42.00,
-        "account_crt_id": "",
-        "cate_id": "",
-        "avatar": "",
-        "volume": 0.00,
-        "is_combo": 0,
-        "is_gift": 0,
-        "sales_name": "佛珠108天然合成藏式红玛瑙8mm椭圆精选级红T1203满2",
-        "crt_ts": 1470157994000,
-        "has_sku": 3,
-        "bar_code": "",
-        "name": "佛珠108天然合成藏式红玛瑙8mm椭圆精选级红T1203满2",
-        "category": "",
-        "status": 5
-      },
-      {
-        "prop_memo": "",
-        "code": "Z202",
-        "memo": "",
-        "rid": 5,
-        "price": 0.00,
-        "lm_ts": 1470157994000,
-        "id": "ruyizang:Z202",
-        "tenantry_id": "ruyizang",
-        "brand": "",
-        "weight": 51.00,
-        "account_crt_id": "",
-        "cate_id": "",
-        "avatar": "",
-        "volume": 0.00,
-        "is_combo": 0,
-        "is_gift": 0,
-        "sales_name": "佛珠手串纯天然汉传白水晶13mm正圆精选级透明TJ14颗1203满1",
-        "crt_ts": 1470157994000,
-        "has_sku": 3,
-        "bar_code": "",
-        "name": "佛珠手串纯天然汉传白水晶13mm正圆精选级透明TJ14颗1203满1",
-        "category": "",
-        "status": 5
-      },
-      {
-        "prop_memo": "",
-        "code": "Z100",
-        "memo": "",
-        "rid": 6,
-        "price": 0.00,
-        "lm_ts": 1470157994000,
-        "id": "ruyizang:Z100",
-        "tenantry_id": "ruyizang",
-        "brand": "",
-        "weight": 60.00,
-        "account_crt_id": "",
-        "cate_id": "",
-        "avatar": "",
-        "volume": 0.00,
-        "is_combo": 0,
-        "is_gift": 0,
-        "sales_name": "佛珠手串天然合成汉传红玛瑙14mm正圆精选级红TJ14颗1203满1",
-        "crt_ts": 1470157994000,
-        "has_sku": 3,
-        "bar_code": "",
-        "name": "佛珠手串天然合成汉传红玛瑙14mm正圆精选级红TJ14颗1203满1",
-        "category": "",
-        "status": 5
-      },
-      {
-        "prop_memo": "",
-        "code": "Z003",
-        "memo": "",
-        "rid": 7,
-        "price": 0.00,
-        "lm_ts": 1470157994000,
-        "id": "ruyizang:Z003",
-        "tenantry_id": "ruyizang",
-        "brand": "",
-        "weight": 27.00,
-        "account_crt_id": "",
-        "cate_id": "",
-        "avatar": "",
-        "volume": 0.00,
-        "is_combo": 0,
-        "is_gift": 0,
-        "sales_name": "佛珠108天然合成汉传红玛瑙6.5mm正圆精选级红T1203满1",
-        "crt_ts": 1470157994000,
-        "has_sku": 3,
-        "bar_code": "",
-        "name": "佛珠108天然合成汉传红玛瑙6.5mm正圆精选级红T1203满1",
-        "category": "",
-        "status": 5
-      },
-      {
-        "prop_memo": "",
-        "code": "Z004",
-        "memo": "",
-        "rid": 8,
-        "price": 0.00,
-        "lm_ts": 1470157994000,
-        "id": "ruyizang:Z004",
-        "tenantry_id": "ruyizang",
-        "brand": "",
-        "weight": 14.00,
-        "account_crt_id": "",
-        "cate_id": "",
-        "avatar": "",
-        "volume": 0.00,
-        "is_combo": 0,
-        "is_gift": 0,
-        "sales_name": "佛珠手串天然合成汉传黑玛瑙8mm正圆精选级黑TJ20颗1203满1",
-        "crt_ts": 1470157994000,
-        "has_sku": 3,
-        "bar_code": "",
-        "name": "佛珠手串天然合成汉传黑玛瑙8mm正圆精选级黑TJ20颗1203满1",
-        "category": "",
-        "status": 5
-      },
-      {
-        "prop_memo": "",
-        "code": "Z005",
-        "memo": "",
-        "rid": 9,
-        "price": 0.00,
-        "lm_ts": 1470157994000,
-        "id": "ruyizang:Z005",
-        "tenantry_id": "ruyizang",
-        "brand": "",
-        "weight": 57.00,
-        "account_crt_id": "",
-        "cate_id": "",
-        "avatar": "",
-        "volume": 0.00,
-        "is_combo": 0,
-        "is_gift": 0,
-        "sales_name": "佛珠108天然合成汉传黑玛瑙8mm正圆精选级黑T1203满1",
-        "crt_ts": 1470157994000,
-        "has_sku": 3,
-        "bar_code": "",
-        "name": "佛珠108天然合成汉传黑玛瑙8mm正圆精选级黑T1203满1",
-        "category": "",
-        "status": 5
-      },
-      {
-        "prop_memo": "",
-        "code": "Z006",
-        "memo": "",
-        "rid": 10,
-        "price": 0.00,
-        "lm_ts": 1470157994000,
-        "id": "ruyizang:Z006",
-        "tenantry_id": "ruyizang",
-        "brand": "",
-        "weight": 28.00,
-        "account_crt_id": "",
-        "cate_id": "",
-        "avatar": "",
-        "volume": 0.00,
-        "is_combo": 0,
-        "is_gift": 0,
-        "sales_name": "佛珠108天然合成汉传红玛瑙6mm正圆精选级红T1203满2",
-        "crt_ts": 1470157994000,
-        "has_sku": 3,
-        "bar_code": "",
-        "name": "佛珠108天然合成汉传红玛瑙6mm正圆精选级红T1203满2",
-        "category": "",
-        "status": 5
-      }
-    ],
-    "pageNo": 1,
-    "pageSize": 10,
-    "totalCount": 5495,
-    "totalPageCount": 550
-  },
-  "status": 1
+    "data": {
+        "data": [{
+            "prop_memo": "",
+            "account_crt_id_name": "gaoqr",
+            "code": "Z001",
+            "memo": "Z001",
+            "rid": 1,
+            "price": 0,
+            "lm_ts": 1470157994000,
+            "id": "ruyizang:Z001",
+            "tenantry_id": "ruyizang",
+            "brand": "",
+            "weight": 50,
+            "account_crt_id": "ruyizang:15201218752",
+            "cate_id": "",
+            "avatar": "",
+            "volume": 0,
+            "is_combo": 0,
+            "is_gift": 0,
+            "sales_name": "佛珠216天然合成清宫红玛瑙5.5mm正圆收藏级红T1203天1",
+            "crt_ts": 1470157994000,
+            "has_sku": 3,
+            "bar_code": "",
+            "name": "佛珠216天然合成清宫红玛瑙5.5mm正圆收藏级红T1203天1",
+            "category": "",
+            "status": 5
+        }, {
+            "prop_memo": "",
+            "code": "Z200",
+            "memo": "",
+            "rid": 2,
+            "price": 0,
+            "lm_ts": 1470157994000,
+            "id": "ruyizang:Z200",
+            "tenantry_id": "ruyizang",
+            "brand": "",
+            "weight": 60,
+            "account_crt_id": "",
+            "cate_id": "",
+            "avatar": "",
+            "volume": 0,
+            "is_combo": 0,
+            "is_gift": 0,
+            "sales_name": "佛珠手串纯天然汉传白水晶14mm正圆精选级透明TJ14颗1203满1",
+            "crt_ts": 1470157994000,
+            "has_sku": 3,
+            "bar_code": "",
+            "name": "佛珠手串纯天然汉传白水晶14mm正圆精选级透明TJ14颗1203满1",
+            "category": "",
+            "status": 5
+        }, {
+            "prop_memo": "",
+            "code": "Z201",
+            "memo": "",
+            "rid": 3,
+            "price": 0,
+            "lm_ts": 1470157994000,
+            "id": "ruyizang:Z201",
+            "tenantry_id": "ruyizang",
+            "brand": "",
+            "weight": 65,
+            "account_crt_id": "",
+            "cate_id": "",
+            "avatar": "",
+            "volume": 0,
+            "is_combo": 0,
+            "is_gift": 0,
+            "sales_name": "佛珠手串纯天然汉传白水晶14mm正圆精选级透明TJ14颗1203Z201满1",
+            "crt_ts": 1470157994000,
+            "has_sku": 3,
+            "bar_code": "",
+            "name": "佛珠手串纯天然汉传白水晶14mm正圆精选级透明TJ14颗1203Z201满1",
+            "category": "",
+            "status": 5
+        }, {
+            "prop_memo": "",
+            "code": "Z002",
+            "memo": "",
+            "rid": 4,
+            "price": 0,
+            "lm_ts": 1470157994000,
+            "id": "ruyizang:Z002",
+            "tenantry_id": "ruyizang",
+            "brand": "",
+            "weight": 42,
+            "account_crt_id": "",
+            "cate_id": "",
+            "avatar": "",
+            "volume": 0,
+            "is_combo": 0,
+            "is_gift": 0,
+            "sales_name": "佛珠108天然合成藏式红玛瑙8mm椭圆精选级红T1203满2",
+            "crt_ts": 1470157994000,
+            "has_sku": 3,
+            "bar_code": "",
+            "name": "佛珠108天然合成藏式红玛瑙8mm椭圆精选级红T1203满2",
+            "category": "",
+            "status": 5
+        }, {
+            "prop_memo": "",
+            "code": "Z202",
+            "memo": "",
+            "rid": 5,
+            "price": 0,
+            "lm_ts": 1470157994000,
+            "id": "ruyizang:Z202",
+            "tenantry_id": "ruyizang",
+            "brand": "",
+            "weight": 51,
+            "account_crt_id": "",
+            "cate_id": "",
+            "avatar": "",
+            "volume": 0,
+            "is_combo": 0,
+            "is_gift": 0,
+            "sales_name": "佛珠手串纯天然汉传白水晶13mm正圆精选级透明TJ14颗1203满1",
+            "crt_ts": 1470157994000,
+            "has_sku": 3,
+            "bar_code": "",
+            "name": "佛珠手串纯天然汉传白水晶13mm正圆精选级透明TJ14颗1203满1",
+            "category": "",
+            "status": 5
+        }, {
+            "prop_memo": "",
+            "code": "Z100",
+            "memo": "",
+            "rid": 6,
+            "price": 0,
+            "lm_ts": 1470157994000,
+            "id": "ruyizang:Z100",
+            "tenantry_id": "ruyizang",
+            "brand": "",
+            "weight": 60,
+            "account_crt_id": "",
+            "cate_id": "",
+            "avatar": "",
+            "volume": 0,
+            "is_combo": 0,
+            "is_gift": 0,
+            "sales_name": "佛珠手串天然合成汉传红玛瑙14mm正圆精选级红TJ14颗1203满1",
+            "crt_ts": 1470157994000,
+            "has_sku": 3,
+            "bar_code": "",
+            "name": "佛珠手串天然合成汉传红玛瑙14mm正圆精选级红TJ14颗1203满1",
+            "category": "",
+            "status": 5
+        }, {
+            "prop_memo": "",
+            "code": "Z003",
+            "memo": "",
+            "rid": 7,
+            "price": 0,
+            "lm_ts": 1470157994000,
+            "id": "ruyizang:Z003",
+            "tenantry_id": "ruyizang",
+            "brand": "",
+            "weight": 27,
+            "account_crt_id": "",
+            "cate_id": "",
+            "avatar": "",
+            "volume": 0,
+            "is_combo": 0,
+            "is_gift": 0,
+            "sales_name": "佛珠108天然合成汉传红玛瑙6.5mm正圆精选级红T1203满1",
+            "crt_ts": 1470157994000,
+            "has_sku": 3,
+            "bar_code": "",
+            "name": "佛珠108天然合成汉传红玛瑙6.5mm正圆精选级红T1203满1",
+            "category": "",
+            "status": 5
+        }, {
+            "prop_memo": "",
+            "code": "Z004",
+            "memo": "",
+            "rid": 8,
+            "price": 0,
+            "lm_ts": 1470157994000,
+            "id": "ruyizang:Z004",
+            "tenantry_id": "ruyizang",
+            "brand": "",
+            "weight": 14,
+            "account_crt_id": "",
+            "cate_id": "",
+            "avatar": "",
+            "volume": 0,
+            "is_combo": 0,
+            "is_gift": 0,
+            "sales_name": "佛珠手串天然合成汉传黑玛瑙8mm正圆精选级黑TJ20颗1203满1",
+            "crt_ts": 1470157994000,
+            "has_sku": 3,
+            "bar_code": "",
+            "name": "佛珠手串天然合成汉传黑玛瑙8mm正圆精选级黑TJ20颗1203满1",
+            "category": "",
+            "status": 5
+        }, {
+            "prop_memo": "",
+            "code": "Z005",
+            "memo": "",
+            "rid": 9,
+            "price": 0,
+            "lm_ts": 1470157994000,
+            "id": "ruyizang:Z005",
+            "tenantry_id": "ruyizang",
+            "brand": "",
+            "weight": 57,
+            "account_crt_id": "",
+            "cate_id": "",
+            "avatar": "",
+            "volume": 0,
+            "is_combo": 0,
+            "is_gift": 0,
+            "sales_name": "佛珠108天然合成汉传黑玛瑙8mm正圆精选级黑T1203满1",
+            "crt_ts": 1470157994000,
+            "has_sku": 3,
+            "bar_code": "",
+            "name": "佛珠108天然合成汉传黑玛瑙8mm正圆精选级黑T1203满1",
+            "category": "",
+            "status": 5
+        }, {
+            "prop_memo": "",
+            "code": "Z006",
+            "memo": "",
+            "rid": 10,
+            "price": 0,
+            "lm_ts": 1470157994000,
+            "id": "ruyizang:Z006",
+            "tenantry_id": "ruyizang",
+            "brand": "",
+            "weight": 28,
+            "account_crt_id": "",
+            "cate_id": "",
+            "avatar": "",
+            "volume": 0,
+            "is_combo": 0,
+            "is_gift": 0,
+            "sales_name": "佛珠108天然合成汉传红玛瑙6mm正圆精选级红T1203满2",
+            "crt_ts": 1470157994000,
+            "has_sku": 3,
+            "bar_code": "",
+            "name": "佛珠108天然合成汉传红玛瑙6mm正圆精选级红T1203满2",
+            "category": "",
+            "status": 5
+        }],
+        "pageNo": 1,
+        "pageSize": 10,
+        "totalCount": 5495,
+        "totalPageCount": 550
+    },
+    "status": 1
 }
 var barModel = {
     "code": "柱状图",
@@ -300,14 +289,41 @@ var lineModel = {
         "type": "code",  //数据类型
     }]
 }
+var radarModel = {
+    "code": "雷达图",
+    "name": "高度",
+    "memo": "",
+    "ds_code": "bind_dataset_code",
+    "show_type": "radar",//显示类型
+    "fields": [{
+        "series": "indicator", //指示器
+        "code": "name",//字段编码
+        "type": "code",//数据类型
+    },{
+        "series": "value", //值
+        "code": "weight",//字段编码
+        "type": "code", //数据类型
+    }]
+}
+var pieModel = {
+    "code": "饼图",
+    "name": "高度",
+    "memo": "",
+    "ds_code": "bind_dataset_code",
+    "show_type": "pie",//显示类型
+    "fields": [{
+        "value": "weight",
+        "name": "name",
+        }]
+}
 
 var Data = function(data, model) {
     var result = []
     var j = {}
+    j.title = model.code //标题
+    j.name = model.name  //内容
+    j.type = model.show_type //类型
     if (model.show_type === "bar" || model.show_type === "line") {
-        j.title = model.code
-        j.name = model.name
-        j.type = model.show_type
         for (let i of model.fields) {
             if (i.series === "x") {
                 if (i.type === "code") {
@@ -325,7 +341,40 @@ var Data = function(data, model) {
                 }
             }
         }
+    } else if (model.show_type === "radar") {
+        for (let i of model.fields) {
+            if (i.series === "indicator") {
+                if (i.type === "code") {
+                    j.indicator = []
+                    for (let i2 of data.data.data) {
+                        var tempObj = {}
+                        tempObj.name = i2[i.code]
+                        j.indicator.push( tempObj )
+                    }
+                }
+            } else if (i.series === "value") {
+                if (i.type = "code") {
+                    j.value = []
+                    for (let i2 of data.data.data) {
+                        j.value.push( i2[i.code] )
+                    }
+                }
+            }
+        }
+    } else if (model.show_type === "pie") {
+        var pieData = []
+        for (let _data of data.data.data) {
+            var tempObj = {}
+            for (let field of model.fields) {
+                for(let key in field) {
+                    tempObj[key] = _data[field[key]]
+                }
+            }
+            pieData.push(tempObj)
+        }
+        j.data = pieData
     }
+
     result.push(j)
     return result
 }
@@ -372,9 +421,8 @@ var __initBar__ = function(Data, Dom) {
     }
     echarts.init(Dom).setOption(option)
 }
-__initBar__(Data(data, barModel), $('#id-bar')[0])
 
-// 折线图 line - xAxis
+// 折线图 line
 var __initLine__ = function(Data, Dom) {
     var title = Data[0].title
     var xAxis = Data[0].xAxis
@@ -415,7 +463,83 @@ var __initLine__ = function(Data, Dom) {
     }
     echarts.init(Dom).setOption(option)
 }
-__initLine__(Data(data, lineModel), $('#id-line')[0])
+
+// 雷达图 radar
+var __initRadar__ = function(Data, Dom) {
+    var title = Data[0].title
+    var className = []
+    for (let i of Data) {
+        className.push(i.name)
+    }
+    var indicator = Data[0].indicator
+    var option = {
+        title: {
+            text: title
+        },
+        tooltip: {},
+        legend: {
+            data: className
+        },
+        radar: {
+            // shape: 'circle', //圆
+            indicator: indicator
+        },
+        series: [{
+            // name: '预算 vs 开销（Budget vs spending）',
+            type: 'radar',
+            // areaStyle: {normal: {}}, //填充色
+            data: Data
+        }]
+    };
+    echarts.init(Dom).setOption(option)
+}
+
+// 饼图 pie
+var __initPie__ = function(Data, Dom) {
+    var title = Data[0].title
+    var Data = Data[0].data
+    option = {
+        title: {
+            text: title,
+        },
+        tooltip: {},
+        series: [{
+            name: 'pie',
+            type: 'pie',
+            selectedMode: 'single',
+            selectedOffset: 30,
+            clockwise: true,
+            label: {
+                normal: {
+                    textStyle: {
+                        fontSize: 18,
+                        color: '#235894'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    lineStyle: {
+                        color: '#235894'
+                    }
+                }
+            },
+            data: Data,
+            itemStyle: {
+                normal: {
+                    opacity: 0.7,
+                    color: {
+                        image: piePatternImg, // img.js文件
+                        repeat: 'repeat'
+                    },
+                    borderWidth: 3,
+                    borderColor: '#235894'
+                }
+            }
+        }]
+    };
+    echarts.init(Dom).setOption(option)
+}
 
 // 气泡图 bubble
 var __initBubble__ = function(title, Data, Dom) {
@@ -470,98 +594,6 @@ var __initBubble__ = function(title, Data, Dom) {
             series: list
         }
         // 使用刚指定的配置项和数据显示图表。
-    echarts.init(Dom).setOption(option)
-}
-
-// 饼图 pie
-var __initPie__ = function(title, Data, Dom) {
-    option = {
-        title: {
-            text: title,
-        },
-        tooltip: {},
-        series: [{
-            name: 'pie',
-            type: 'pie',
-            selectedMode: 'single',
-            selectedOffset: 30,
-            clockwise: true,
-            label: {
-                normal: {
-                    textStyle: {
-                        fontSize: 18,
-                        color: '#235894'
-                    }
-                }
-            },
-            labelLine: {
-                normal: {
-                    lineStyle: {
-                        color: '#235894'
-                    }
-                }
-            },
-            data: Data,
-            itemStyle: {
-                normal: {
-                    opacity: 0.7,
-                    color: {
-                        image: piePatternImg, // img.js文件
-                        repeat: 'repeat'
-                    },
-                    borderWidth: 3,
-                    borderColor: '#235894'
-                }
-            }
-        }]
-    };
-    echarts.init(Dom).setOption(option)
-}
-
-// 雷达图 radar
-var __initRadar__ = function(title, Data, Dom) {
-    var className = []
-    for (let i of Data) {
-        className.push(i.name)
-    }
-    var indicator = [{
-        name: '销售（sales）',
-        max: 6500
-        }, {
-        name: '管理（Administration）',
-        max: 16000
-        }, {
-        name: '信息技术（Information Techology）',
-        max: 30000
-        }, {
-        name: '客服（Customer Support）',
-        max: 38000
-        }, {
-        name: '研发（Development）',
-        max: 52000
-        }, {
-        name: '市场（Marketing）',
-        max: 25000
-        }]
-    var option = {
-        title: {
-            text: title
-        },
-        tooltip: {},
-        legend: {
-            data: className
-        },
-        radar: {
-            // shape: 'circle', //圆
-            indicator: indicator
-        },
-        series: [{
-            // name: '预算 vs 开销（Budget vs spending）',
-            type: 'radar',
-            // areaStyle: {normal: {}}, //填充色
-            data: Data
-        }]
-    };
     echarts.init(Dom).setOption(option)
 }
 
@@ -640,7 +672,11 @@ var __initFunnel__ = function(title, Data, Dom) {
 }
 
 var __init__ = function() {
-    // 气泡图DATA
+    __initBar__(  Data(data, barModel),   $('#id-bar')[0])
+    __initLine__( Data(data, lineModel),  $('#id-line')[0])
+    __initRadar__(Data(data, radarModel), $('#id-radar')[0])
+    __initPie__(  Data(data, pieModel),   $('#id-pie')[0])
+    // 气泡图DATA (Model自己编)
     var bubbleData = [{
         'class': '2048',
         'shuju': [
@@ -693,7 +729,7 @@ var __init__ = function() {
     var pieData = [{
             value: 335,
             name: '直接访问'
-    }, {
+        }, {
             value: 310,
             name: '邮件营销'
         }, {
@@ -706,7 +742,6 @@ var __init__ = function() {
             value: 1548,
             name: '搜索引擎'
         }]
-    __initPie__('饼图', pieData, $('#id-pie')[0])
     // 折线图DATA
     var lineData = [{
             name: '邮件营销',
@@ -725,7 +760,6 @@ var __init__ = function() {
         value: [5000, 14000, 28000, 31000, 42000, 21000],
         name: '实际开销（Actual Spending）'
         }]
-    __initRadar__('雷达图', radarData, $('#id-radar')[0])
     // 漏斗图DATA
     var funnelData = [
         {value: 60, name: '亚索'},
