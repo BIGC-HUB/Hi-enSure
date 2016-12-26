@@ -268,11 +268,11 @@ var data = {
   },
   "status": 1
 }
-var model = {
-    "code": "",
-    "name": '柱状图',
+var barModel = {
+    "code": "柱状图",
+    "name": '高度',
     "memo": "",
-    "ds_code": "bind_dataset_code",//所属数据集
+    "ds_code": "bind_dataset_code",
     "show_type": "bar",//显示类型
     "fields": [{
         "series": "x", //所在轴
@@ -284,6 +284,138 @@ var model = {
         "type": "code",  //数据类型
     }]
 }
+var lineModel = {
+    "code": "折线图",
+    "name": '高度',
+    "memo": "",
+    "ds_code": "bind_dataset_code",
+    "show_type": "line",//显示类型
+    "fields": [{
+        "series": "x", //所在轴
+        "code": "name",//字段编码
+        "type": "code",//数据类型
+    },{
+        "series": "y",   //所在轴
+        "code": "weight",//字段编码
+        "type": "code",  //数据类型
+    }]
+}
+
+var Data = function(data, model) {
+    var result = []
+    var j = {}
+    if (model.show_type === "bar" || model.show_type === "line") {
+        j.title = model.code
+        j.name = model.name
+        j.type = model.show_type
+        for (let i of model.fields) {
+            if (i.series === "x") {
+                if (i.type === "code") {
+                    j.xAxis = []
+                    for (let i2 of data.data.data) {
+                        j.xAxis.push( i2[i.code] )
+                    }
+                }
+            } else if (i.series === "y") {
+                if (i.type === "code") {
+                    j.data = []
+                    for (let i2 of data.data.data) {
+                        j.data.push( i2[i.code] )
+                    }
+                }
+            }
+        }
+    }
+    result.push(j)
+    return result
+}
+
+// 柱形图 bar
+var __initBar__ = function(Data, Dom) {
+    var xAxis = Data[0].xAxis
+    var title = Data[0].title
+    var className = []
+    for (let i of Data) {
+        className.push(i.name)
+    }
+    var option = {
+        color: ['#333'],
+        title: {
+            text: title
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        // legend: {
+        //     data: className
+        // },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: xAxis,
+            axisTick: {
+                alignWithLabel: true
+            }
+        }],
+        yAxis: [{
+            type: 'value'
+        }],
+        series: Data
+    }
+    echarts.init(Dom).setOption(option)
+}
+__initBar__(Data(data, barModel), $('#id-bar')[0])
+
+// 折线图 line - xAxis
+var __initLine__ = function(Data, Dom) {
+    var title = Data[0].title
+    var xAxis = Data[0].xAxis
+    var className = []
+    for (let i of Data) {
+        className.push(i.name)
+    }
+    var option = {
+        title: {
+            text: title
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: className
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: xAxis
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: Data
+    }
+    echarts.init(Dom).setOption(option)
+}
+__initLine__(Data(data, lineModel), $('#id-line')[0])
 
 // 气泡图 bubble
 var __initBubble__ = function(title, Data, Dom) {
@@ -338,89 +470,6 @@ var __initBubble__ = function(title, Data, Dom) {
             series: list
         }
         // 使用刚指定的配置项和数据显示图表。
-    echarts.init(Dom).setOption(option)
-}
-
-// 折线图 line - xAxis
-var __initLine__ = function(title, Data, Dom) {
-    var xAxis = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
-    var className = []
-    for (let i of Data) {
-        className.push(i.name)
-    }
-    var option = {
-        title: {
-            text: '折线图堆叠'
-        },
-        tooltip: {
-            trigger: 'axis'
-        },
-        legend: {
-            data: className
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        toolbox: {
-            feature: {
-                saveAsImage: {}
-            }
-        },
-        xAxis: {
-            type: 'category',
-            boundaryGap: false,
-            data: xAxis
-        },
-        yAxis: {
-            type: 'value'
-        },
-        series: Data
-    }
-    echarts.init(Dom).setOption(option)
-}
-
-// 柱形图 bar
-var __initBar__ = function(title, Data, Dom) {
-    var xAxis = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
-    var className = []
-    for (let i of Data) {
-        className.push(i.name)
-    }
-    var option = {
-        color: ['#000'],
-        title: {
-            text: title
-        },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: { // 坐标轴指示器，坐标轴触发有效
-                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-            }
-        },
-        // legend: {
-        //     data: className
-        // },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        xAxis: [{
-            type: 'category',
-            data: xAxis,
-            axisTick: {
-                alignWithLabel: true
-            }
-        }],
-        yAxis: [{
-            type: 'value'
-        }],
-        series: Data
-    }
     echarts.init(Dom).setOption(option)
 }
 
@@ -591,14 +640,6 @@ var __initFunnel__ = function(title, Data, Dom) {
 }
 
 var __init__ = function() {
-    // 柱形图DATA
-    var barData = [{
-        name: '直接访问',
-        type: 'bar',
-        barWidth: '60%', //不必须
-        data: [10, 52, 200, 334, 390, 330, 220]
-    }]
-    __initBar__('Echo柱形图', barData, $('#id-bar')[0])
     // 气泡图DATA
     var bubbleData = [{
         'class': '2048',
@@ -671,12 +712,11 @@ var __init__ = function() {
             name: '邮件营销',
             type: 'line',
             data: [120, 132, 101, 134, 90, 230, 210]
-    }, {
+        }, {
             name: '搜索引擎',
             type: 'line',
             data: [820, 932, 901, 934, 1290, 1330, 1320]
         }]
-    __initLine__('折线图堆叠', lineData, $('#id-line')[0])
     // 雷达图DATA
     var radarData = [{
         value: [4300, 10000, 28000, 35000, 50000, 19000],
