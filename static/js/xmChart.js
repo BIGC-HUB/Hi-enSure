@@ -17,7 +17,7 @@
             this.data = setting.data;
             this.element = element;
             this.parent = parent;
-            this.panel = this;
+            this.panel = JSON.parse(JSON.stringify(this));
             // this.build();
             this.load();
 
@@ -47,13 +47,15 @@
             },
             //改变图表模型
             setModel(model){
+                this.model = model
                 this.chartType = model.show_type
-                this.loadData = this.dataLoader(this.data, model);
-                chart.configBuilder[this.chartType](this.loadData, this.element)
+                this.load()
             },
             //恢复成最初的输入和模型
             resetChart(){
-                this.load()
+                this.chartType = this.panel.model.show_type
+                this.loadData = this.dataLoader(this.panel.data, this.panel.model);
+                chart.configBuilder[this.chartType](this.loadData, this.element)
             },
             //改成使用 dataLoader
             dataLoader: function(data, model) {
@@ -115,7 +117,6 @@
                         series: Data
                     }
                     echarts.init(Dom).setOption(option)
-                    log(option)
                 },
                 // 折线图 line
                 line: function(Data, Dom) {
