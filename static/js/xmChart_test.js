@@ -592,7 +592,7 @@ var bubbleModel = {
 
 var __init__ = function() {
     // chart( model, element, parent, setting )
-    c = chart(barModel,   $('#id-bar')[0],    null, {"data":data})
+    chart(barModel,   $('#id-bar')[0],    null, {"data":data})
     chart(lineModel,  $('#id-line')[0],   null, {"data":data})
     chart(radarModel, $('#id-radar')[0],  null, {"data":data})
     chart(pieModel,   $('#id-pie')[0],    null, {"data":data})
