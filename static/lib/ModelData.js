@@ -40,7 +40,7 @@ var TestModelData = {
       "tenantry_id": "ruyizang",
       "brand": "",
       "weight": 60.00,
-      "account_crt_id": "",
+      "account_crt_id": "ruyizang:15201218752",
       "cate_id": "",
       "avatar": "",
       "volume": 0.00,

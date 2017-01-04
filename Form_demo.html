@@ -3,56 +3,30 @@
     <head>
         <meta charset="utf-8">
         <title>表单组件</title>
-        <link rel="stylesheet" href="static/lib/Purecss.min.css">
+        <link href="static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="static/lib/bootstrap-Daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" media="all">
+
+        <link href="static/lib/Purecss.min.css" rel="stylesheet">
+        <link href="static/lib/Purecss.mobile.css" rel="stylesheet">
+        <link href="static/css/Form.css" rel="stylesheet">
         <style>
-            .form {
-                width: 50%;
-                margin: 2em auto 0;
+            #demo {
+                width: 80%;
+                margin: 0 auto;
             }
         </style>
+
     </head>
     <body>
         <!-- Form示例 -->
-        <div class="form pure-form pure-form-stacked">
-            <fieldset>
-                <legend>A Stacked Form</legend>
-
-                <label for="email">Email</label>
-                <input id="email" type="email" placeholder="Email">
-
-                <label for="password">Password</label>
-                <input id="password" type="password" placeholder="Password">
-
-                <label for="state">State</label>
-                <select id="state">
-                    <option>AL</option>
-                    <option>CA</option>
-                    <option>IL</option>
-                </select>
-                <!-- 复选框 -->
-                <label for="remember" class="pure-checkbox">
-                    <input id="remember" type="checkbox"> Remember me
-                </label>
-                <label for="READ" class="pure-checkbox">
-                    <input id="READ" type="checkbox"> READ me
-                </label>
-                <!-- 单选框 -->
-                <label for="option-two" class="pure-radio">
-                    <input id="option-two" type="radio" name="optionsRadios" value="option1" checked>
-                    Here's a radio button. You can choose this one..
-                </label>
-                <label for="option-three" class="pure-radio">
-                    <input id="option-three" type="radio" name="optionsRadios" value="option2">
-                    ..Or this one!
-                </label>
-
-                <button class="pure-button pure-button-primary">Sign in</button>
-            </fieldset>
-        </div>
+        <div id="demo"></div>
 
         <!-- JS -->
         <script src="static/lib/ModelData.js"></script>
         <script src="static/lib/jQuery.min.js"></script>
+        <script src="static/lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="static/lib/bootstrap-Daterangepicker/moment.min.js"></script>
+        <script src="static/lib/bootstrap-Daterangepicker/daterangepicker.js"></script>
 
         <script src="static/js/Form.js"></script>
         <script src="static/js/Form_test.js"></script>
